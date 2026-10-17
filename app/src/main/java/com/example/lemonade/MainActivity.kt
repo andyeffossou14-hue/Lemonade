@@ -119,6 +119,12 @@ fun LemonadeApp(modifier: Modifier = Modifier) {
                     onImageClick = { currentStep = RESTART }
                 )
 
+                RESTART -> LemonTextAndImage(
+                    textLabelResourceId = R.string.lemon_empty_glass,
+                    drawableResourceId = R.drawable.lemon_restart,
+                    contentDescriptionResourceId = R.string.empty_glass_content_description,
+                    onImageClick = { currentStep = SELECT }
+                )
 
 
             }
