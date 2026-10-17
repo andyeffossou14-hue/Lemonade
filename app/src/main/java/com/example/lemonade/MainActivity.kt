@@ -112,6 +112,12 @@ fun LemonadeApp(modifier: Modifier = Modifier) {
                         }
                     }
                 )
+                DRINK -> LemonTextAndImage(
+                    textLabelResourceId = R.string.lemon_drink,
+                    drawableResourceId = R.drawable.lemon_drink,
+                    contentDescriptionResourceId = R.string.glass_of_lemonade_content_description,
+                    onImageClick = { currentStep = RESTART }
+                )
 
 
 
