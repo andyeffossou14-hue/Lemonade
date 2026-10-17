@@ -101,6 +101,18 @@ fun LemonadeApp(modifier: Modifier = Modifier) {
                         squeezeCount = (2..4).random()
                     }
                 )
+                SQUEEZE -> LemonTextAndImage(
+                    textLabelResourceId = R.string.lemon_squeeze,
+                    drawableResourceId = R.drawable.lemon_squeeze,
+                    contentDescriptionResourceId = R.string.lemon_content_description,
+                    onImageClick = {
+                        squeezeCount--
+                        if (squeezeCount == 0) {
+                            currentStep = DRINK
+                        }
+                    }
+                )
+
 
 
             }
